@@ -13,9 +13,6 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <meta name="description" content="Clone do Filômentro" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap" rel="stylesheet" />
         <link rel="icon" href="/favicon.png" />
         <title>Clone Filômentro covid-19</title>
       </Head>
