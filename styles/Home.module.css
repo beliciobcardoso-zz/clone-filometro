@@ -19,7 +19,7 @@
 }
 
 .statusCard {
-  background-color: #fff;
+  background-image: linear-gradient(to right, #d3d2d2, #fff);
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -51,6 +51,65 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: #3fafb5;
+}
+
+.containerVacinacao {
+  background-color: #fff;
+  padding-top: 0.2rem;
+}
+
+.containerVacinacao div:nth-child(2) {
+  border-bottom: solid 5px #77aba5;
+  border-radius: 0 0 5px 5px;
+  margin: 0 2rem;
+}
+
+.locaisVacinacao {
+  padding-top: 0.2rem;
+  background-color: #d3d2d2;
+  padding: 0 2rem;
+}
+
+.locaisVacinacao .title {
+  display: flex;
+  align-items: center;
+}
+
+.locaisVacinacao .title svg {
+  color: #77aba5;
+  font-size: 1.5rem;
+}
+
+.locaisVacinacao .title h1 {
+  color: #777777;
+  text-transform: uppercase;
+  font-family: 'Poppins';
+  padding-left: 0.5rem;
+}
+
+.containerVacinacao .buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+  padding-right: 2rem;
+}
+
+.buttons button {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #77aba5;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Poppins';
+  font-weight: 600;
+}
+
+.buttons button svg {
+  margin-right: 0.5rem;
 }
 
 .footer {
