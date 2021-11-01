@@ -71,21 +71,38 @@ export default function Home() {
           <div></div>
 
           <div className={styles.buttons}>
-            <button>
-              <FontAwesomeIcon icon="car" />
-              <p>DRIVE THRU</p>
-            </button>
-            <button>
-              <FontAwesomeIcon icon="male" />
-              <p>POSTOS FIXOS</p>
-            </button>
+            <a href="#driveThru">
+              <button>
+                <FontAwesomeIcon icon="car" />
+                <p>DRIVE THRU</p>
+              </button>
+            </a>
+            <a href="#postosFixos">
+              <button>
+                <FontAwesomeIcon icon="male" />
+                <p>POSTOS FIXOS</p>
+              </button>
+            </a>
           </div>
+
+          <section id="driveThru">
+            <div ><FontAwesomeIcon icon="car" />
+              <p>DRIVE THRU</p>
+            </div>
+
+          </section>
+          <section id="postosFixos">
+            <div ><FontAwesomeIcon icon="male" />
+              <p>POSTOS FIXOS</p>
+            </div>
+
+          </section>
         </div>
-      </main>
+      </main >
 
       <footer className={styles.footer}>
         <p>Belicio Cardoso &copy; {new Date().getFullYear()}</p>
       </footer>
-    </div>
+    </div >
   )
 }
