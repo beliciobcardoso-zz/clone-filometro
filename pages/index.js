@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Clone Filômentro covid-19</title>
         <meta name="description" content="Clone do Filômentro" />
         <link rel="icon" href="/favicon.png" />
+        <title>Clone Filômentro covid-19</title>
       </Head>
 
       <div className={styles.header}>
@@ -25,7 +25,6 @@ export default function Home() {
       <main className={styles.main}>
 
         <div className={styles.status}>
-
           <div className={styles.statusCard}>
             <FontAwesomeIcon className={styles.icon} icon="clinic-medical" />
             <div className={styles.cardData}>
@@ -51,7 +50,6 @@ export default function Home() {
               <p>Poucas filas</p>
             </div>
           </div>
-
           <div className={styles.statusCard}>
             <FontAwesomeIcon className={styles.icon} icon="chart-line" />
             <div className={styles.cardData}>
@@ -60,14 +58,51 @@ export default function Home() {
               <p>Filas Moderadas</p>
             </div>
           </div>
-
         </div>
 
-      </main>
+        <div className={styles.containerVacinacao}>
+          <div className={styles.locaisVacinacao}>
+            <div className={styles.title}>
+              <FontAwesomeIcon icon="chevron-down" />
+              <h1>Locais de vacinação</h1>
+            </div>
+          </div>
+
+          <div></div>
+
+          <div className={styles.buttons}>
+            <a href="#driveThru">
+              <button>
+                <FontAwesomeIcon icon="car" />
+                <p>DRIVE THRU</p>
+              </button>
+            </a>
+            <a href="#postosFixos">
+              <button>
+                <FontAwesomeIcon icon="male" />
+                <p>POSTOS FIXOS</p>
+              </button>
+            </a>
+          </div>
+
+          <section id="driveThru">
+            <div ><FontAwesomeIcon icon="car" />
+              <p>DRIVE THRU</p>
+            </div>
+
+          </section>
+          <section id="postosFixos">
+            <div ><FontAwesomeIcon icon="male" />
+              <p>POSTOS FIXOS</p>
+            </div>
+
+          </section>
+        </div>
+      </main >
 
       <footer className={styles.footer}>
         <p>Belicio Cardoso &copy; {new Date().getFullYear()}</p>
       </footer>
-    </div>
+    </div >
   )
 }
