@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas)
+import LocVac from './components/LocaisVacinacao/index'
 
 export default function Home() {
   return (
@@ -61,6 +62,7 @@ export default function Home() {
         </div>
 
         <div className={styles.containerVacinacao}>
+
           <div className={styles.locaisVacinacao}>
             <div className={styles.title}>
               <FontAwesomeIcon icon="chevron-down" />
@@ -86,23 +88,27 @@ export default function Home() {
           </div>
 
           <section id="driveThru">
-            <div ><FontAwesomeIcon icon="car" />
+            <div className={styles.titleLocal}>
+              <FontAwesomeIcon icon="car" />
               <p>DRIVE THRU</p>
             </div>
-
+            <LocVac />
           </section>
           <section id="postosFixos">
-            <div ><FontAwesomeIcon icon="male" />
+            <div className={styles.titleLocal}>
+              <FontAwesomeIcon icon="male" />
               <p>POSTOS FIXOS</p>
             </div>
-
+            <LocVac />
+            <LocVac />
+            <LocVac />
           </section>
         </div>
-      </main >
+      </main>
 
       <footer className={styles.footer}>
         <p>Belicio Cardoso &copy; {new Date().getFullYear()}</p>
       </footer>
-    </div >
+    </div>
   )
 }
