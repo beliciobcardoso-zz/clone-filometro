@@ -1,0 +1,145 @@
+/************* card endereço ****************/
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0 2rem 2rem;
+    font-family: 'Poppins';
+    border-left: solid 10px #5dce78;
+    border-radius: 10px;
+}
+
+.row .rowEndereco {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.endereco>p:nth-child(1) {
+    font-weight: 900;
+    color: #000
+}
+
+.endereco>p:nth-child(2),
+.tituloSituacaoFila {
+    color: #777777;
+}
+
+.tituloSituacaoFila {
+    border-right: 1px solid #d6d6d6;
+    margin-right: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.publicoAlvo {
+    background-color: #9293b1;
+    margin-top: 1rem;
+}
+
+.containerTipo {
+    display: flex;
+    align-items: center;
+}
+
+.containerTipo div,
+.publicoAlvo {
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    padding: 0 0.5rem;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.containerTipo div svg,
+.publicoAlvo svg {
+    margin-right: 0.5rem;
+}
+
+.endereco div p,
+.rowEndereco>p {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.row .statusFila {
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.row .statusFila svg {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+}
+
+.row .statusFila div {
+    display: flex;
+    align-items: center;
+}
+
+
+/************** Status fila ************/
+.corSemFila {
+    color: #5dce78;
+}
+
+.bgSemFila {
+    background-color: #5dce78;
+}
+
+.corPoucaFila {
+    color: #f1bf1f;
+}
+
+.bgPoucaFila {
+    background-color: #f1bf1f;
+}
+
+.corFilaIntensa {
+    color: #a71319;
+}
+
+.bgFilaIntensa {
+    background-color: #a71319;
+}
+
+.corEncerrado {
+    color: #cccccc;
+}
+
+.bgEncerrado {
+    background-color: #cccccc;
+}
+
+
+/******** responsividade ***********/
+
+@media screen and (max-width: 1024px) {
+
+    .row {
+        display: block;
+        font-size: 75%;
+    }
+
+    .statusFila {
+        margin-top: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .row {
+        display: block;
+    }
+
+    .containerTipo {
+        flex-wrap: wrap;
+    }
+}

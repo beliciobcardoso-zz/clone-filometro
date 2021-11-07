@@ -7,12 +7,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas)
+import LocVac from './components/LocaisVacinacao/index'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <meta name="description" content="Clone do Filômentro" />
+        <link meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.png" />
         <title>Clone Filômentro covid-19</title>
       </Head>
@@ -25,6 +27,7 @@ export default function Home() {
       <main className={styles.main}>
 
         <div className={styles.status}>
+
           <div className={styles.statusCard}>
             <FontAwesomeIcon className={styles.icon} icon="clinic-medical" />
             <div className={styles.cardData}>
@@ -50,6 +53,7 @@ export default function Home() {
               <p>Poucas filas</p>
             </div>
           </div>
+
           <div className={styles.statusCard}>
             <FontAwesomeIcon className={styles.icon} icon="chart-line" />
             <div className={styles.cardData}>
@@ -58,9 +62,11 @@ export default function Home() {
               <p>Filas Moderadas</p>
             </div>
           </div>
+
         </div>
 
         <div className={styles.containerVacinacao}>
+
           <div className={styles.locaisVacinacao}>
             <div className={styles.title}>
               <FontAwesomeIcon icon="chevron-down" />
@@ -86,23 +92,27 @@ export default function Home() {
           </div>
 
           <section id="driveThru">
-            <div ><FontAwesomeIcon icon="car" />
+            <div className={styles.titleLocal}>
+              <FontAwesomeIcon icon="car" />
               <p>DRIVE THRU</p>
             </div>
-
+            <LocVac />
           </section>
           <section id="postosFixos">
-            <div ><FontAwesomeIcon icon="male" />
+            <div className={styles.titleLocal}>
+              <FontAwesomeIcon icon="male" />
               <p>POSTOS FIXOS</p>
             </div>
-
+            <LocVac />
+            <LocVac />
+            <LocVac />
           </section>
         </div>
-      </main >
+      </main>
 
       <footer className={styles.footer}>
         <p>Belicio Cardoso &copy; {new Date().getFullYear()}</p>
       </footer>
-    </div >
+    </div>
   )
 }
