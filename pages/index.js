@@ -1,20 +1,21 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import logopms from '../public/imagens/logo-pms.png'
-import logofilo from '../public/imagens/logo-filometro.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-library.add(fas)
-import LocVac from './components/LocaisVacinacao/index'
+import Head from 'next/head';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import styles from '../styles/Home.module.css';
+import logopms from '../public/imagens/logo-pms.png';
+import logofilo from '../public/imagens/logo-filometro.png';
+import LocVac from '../components/LocaisVacinacao/index';
 
-export default function Home() {
+library.add(fas);
+
+export default function Home({ posts }) {
+
   return (
     <div className={styles.container}>
       <Head>
         <meta name="description" content="Clone do Filômentro" />
-        <link meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.png" />
         <title>Clone Filômentro covid-19</title>
       </Head>
@@ -41,7 +42,7 @@ export default function Home() {
             <div className={styles.cardData}>
               <p>VACINADOS HOJE</p>
               <p>(1ª, 2ª E 3ª DOSES)</p>
-              <p>9.493</p>
+              <p>9.586</p>
             </div>
           </div>
 
@@ -74,8 +75,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div></div>
-
           <div className={styles.buttons}>
             <a href="#driveThru">
               <button>
@@ -96,24 +95,67 @@ export default function Home() {
               <FontAwesomeIcon icon="car" />
               <p>DRIVE THRU</p>
             </div>
-            <LocVac />
+            {
+              posts.drivethru.map((post) => (
+                  
+                <LocVac             
+                unidade={post.unidade} 
+                endereco={post.endereco}
+                atualizacao={post.atualizacao}
+                dose1={post.dose[0]}
+                dose2={post.dose[1]}
+                dose3={post.dose[2] ? post.dose[2] : " "} //undefined
+                estadofila={post.estadofila}
+                descricao={post.descricao}               
+                />
+
+              ))
+            }
+           
           </section>
           <section id="postosFixos">
             <div className={styles.titleLocal}>
               <FontAwesomeIcon icon="male" />
               <p>POSTOS FIXOS</p>
             </div>
-            <LocVac />
-            <LocVac />
-            <LocVac />
+            {
+              posts.postosfixo.map((post) => (
+                  
+                <LocVac             
+                unidade={post.unidade} 
+                endereco={post.endereco}
+                atualizacao={post.atualizacao}
+                dose1={post.dose[0]}
+                dose2={post.dose[1]}
+                dose3={post.dose[2] ? post.dose[2] : " "} //undefined
+                estadofila={post.estadofila}
+                descricao={post.descricao}                
+                />
+
+              ))              
+            }
           </section>
         </div>
         <a href="#" className={styles.back_to_top}><FontAwesomeIcon icon="arrow-alt-circle-up" /></a>
       </main>
 
       <footer className={styles.footer}>
-        <p>Belicio Cardoso &copy; {new Date().getFullYear()}</p>
+        <p>
+          Belicio Cardoso &copy;
+          {new Date().getFullYear()}
+        </p>
       </footer>
     </div>
-  )
+  );
+}
+
+export async function getStaticProps() {
+  const res = await fetch('http://localhost:3000/api');
+  const posts = await res.json();
+ //console.log(posts);
+  return {
+    props: {
+      posts,
+    },
+  };
 }
