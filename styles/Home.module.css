@@ -135,6 +135,38 @@
 
 /*************************/
 
+.back_to_top_none {
+  display: none;
+}
+
+.back_to_top {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  width: 64px;
+  height: 64px;
+  z-index: 99;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s ease-out;
+}
+
+a.back_to_top {
+  padding: 16px;
+  font-size: 2rem;
+  color: #ffffff;
+  background-color: #3fafb5;
+  border-radius: 6px;
+}
+
+a.back_to_top:hover {
+  background-color: #77aba5;
+  padding-top: 5px;
+}
+
+
+/**************************/
+
 .footer {
   display: flex;
   padding: 2rem 0;

@@ -108,6 +108,7 @@ export default function Home() {
             <LocVac />
           </section>
         </div>
+        <a href="#" className={styles.back_to_top}><FontAwesomeIcon icon="arrow-alt-circle-up" /></a>
       </main>
 
       <footer className={styles.footer}>
