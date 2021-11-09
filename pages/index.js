@@ -153,3 +153,10 @@ export default function Home() {
         </div>
     );
 }
+
+export async function getServerSideProps() {
+    const res = await fetch(process.env.HOST);
+    const data = await res.json();
+
+    return { props: { data } };
+}
