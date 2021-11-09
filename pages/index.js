@@ -9,7 +9,7 @@ import LocVac from '../components/LocaisVacinacao/index';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
 
-export default function Home() {
+export default function Home({ data }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -104,7 +104,7 @@ export default function Home() {
                             <p>DRIVE THRU</p>
                         </div>
                         <LocVac />
-                        {/* {posts.drivethru.map((post, index) => (
+                        {data.drivethru.map((post, index) => (
                             <LocVac
                                 key={index}
                                 unidade={post.unidade}
@@ -116,7 +116,7 @@ export default function Home() {
                                 //estadofila={post.estadofila}
                                 descricao={post.descricao}
                             />
-                        ))} */}
+                        ))}
                     </section>
                     <section id="postosFixos">
                         <div className={styles.titleLocal}>
@@ -124,7 +124,7 @@ export default function Home() {
                             <p>POSTOS FIXOS</p>
                         </div>
                         <LocVac />
-                        {/* posts.postosfixo.map((post, index) => (
+                        {data.postosfixo.map((post, index) => (
                             <LocVac
                                 key={index}
                                 unidade={post.unidade}
@@ -133,10 +133,10 @@ export default function Home() {
                                 dose1={post.dose[0]}
                                 dose2={post.dose[1]}
                                 dose3={post.dose[2]} //undefined
-                                //estadofila={post.estadofila}
+                                estadofila={post.estadofila}
                                 descricao={post.descricao}
                             />
-                        )) */}
+                        ))}
                     </section>
                 </div>
                 <a href="#" className={styles.back_to_top}>
@@ -157,6 +157,15 @@ export default function Home() {
 export async function getServerSideProps() {
     const res = await fetch(process.env.HOST);
     const data = await res.json();
+
+    if (!data) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+        };
+    }
 
     return { props: { data } };
 }
