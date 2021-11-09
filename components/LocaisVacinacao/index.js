@@ -12,10 +12,7 @@ export default function LocaisVacinacao({
     dose2,
     dose3,
     descricao,
-    //estadofila,
 }) {
-    let bgEstadoFila = styles.bgSemFila;
-    let corEstadoFila = styles.corSemFila;
     return (
         <div className={styles.row}>
             <div className={styles.rowEndereco}>
@@ -28,11 +25,11 @@ export default function LocaisVacinacao({
                             <FontAwesomeIcon icon="clock" />
                             <p>atualizado {atualizacao}</p>
                         </div>
-                        <div className={bgEstadoFila}>
+                        <div className={styles.bgSemFila}>
                             <FontAwesomeIcon icon="check" />
                             <p>{dose1}</p>
                         </div>
-                        <div className={bgEstadoFila}>
+                        <div className={styles.bgSemFila}>
                             <FontAwesomeIcon icon="check" />
                             <p>{dose2}</p>
                         </div>
@@ -52,7 +49,7 @@ export default function LocaisVacinacao({
 
             <div className={styles.statusFila}>
                 <p className={styles.tituloSituacaoFila}>situação</p>
-                <div className={corEstadoFila}>
+                <div className={styles.corSemFila}>
                     <FontAwesomeIcon icon="square" />
                 </div>
             </div>
