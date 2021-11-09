@@ -6,10 +6,10 @@ import logofilo from '../public/imagens/logo-filometro.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-library.add(fas);
 import LocVac from '../components/LocaisVacinacao/index';
+library.add(fas);
 
-export default function Home() {
+export default function Home({ posts }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -103,16 +103,38 @@ export default function Home() {
                             <FontAwesomeIcon icon="car" />
                             <p>DRIVE THRU</p>
                         </div>
-                        <LocVac />
+                        {posts.drivethru.map((post, index) => (
+                            <LocVac
+                                key={index}
+                                unidade={post.unidade}
+                                endereco={post.endereco}
+                                atualizacao={post.atualizacao}
+                                dose1={post.dose[0]}
+                                dose2={post.dose[1]}
+                                dose3={post.dose[2]} //undefined
+                                //estadofila={post.estadofila}
+                                descricao={post.descricao}
+                            />
+                        ))}
                     </section>
                     <section id="postosFixos">
                         <div className={styles.titleLocal}>
                             <FontAwesomeIcon icon="male" />
                             <p>POSTOS FIXOS</p>
                         </div>
-                        <LocVac />
-                        <LocVac />
-                        <LocVac />
+                        {posts.drivethru.map((post, index) => (
+                            <LocVac
+                                key={index}
+                                unidade={post.unidade}
+                                endereco={post.endereco}
+                                atualizacao={post.atualizacao}
+                                dose1={post.dose[0]}
+                                dose2={post.dose[1]}
+                                dose3={post.dose[2]} //undefined
+                                //estadofila={post.estadofila}
+                                descricao={post.descricao}
+                            />
+                        ))}
                     </section>
                 </div>
                 <a href="#" className={styles.back_to_top}>
@@ -125,4 +147,15 @@ export default function Home() {
             </footer>
         </div>
     );
+}
+
+export async function getStaticProps() {
+    const res = await fetch(process.env.HOST);
+    const posts = await res.json();
+    //console.log(process.env.HOST);
+    return {
+        props: {
+            posts,
+        },
+    };
 }
