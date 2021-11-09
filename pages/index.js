@@ -9,7 +9,7 @@ import LocVac from '../components/LocaisVacinacao/index';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
 
-export default function Home({ posts }) {
+export default function Home() {
     return (
         <div className={styles.container}>
             <Head>
@@ -103,7 +103,8 @@ export default function Home({ posts }) {
                             <FontAwesomeIcon icon="car" />
                             <p>DRIVE THRU</p>
                         </div>
-                        {posts.drivethru.map((post, index) => (
+                        <LocVac />
+                        {/* {posts.drivethru.map((post, index) => (
                             <LocVac
                                 key={index}
                                 unidade={post.unidade}
@@ -115,14 +116,15 @@ export default function Home({ posts }) {
                                 //estadofila={post.estadofila}
                                 descricao={post.descricao}
                             />
-                        ))}
+                        ))} */}
                     </section>
                     <section id="postosFixos">
                         <div className={styles.titleLocal}>
                             <FontAwesomeIcon icon="male" />
                             <p>POSTOS FIXOS</p>
                         </div>
-                        {posts.drivethru.map((post, index) => (
+                        <LocVac />
+                        {/* posts.postosfixo.map((post, index) => (
                             <LocVac
                                 key={index}
                                 unidade={post.unidade}
@@ -134,7 +136,7 @@ export default function Home({ posts }) {
                                 //estadofila={post.estadofila}
                                 descricao={post.descricao}
                             />
-                        ))}
+                        )) */}
                     </section>
                 </div>
                 <a href="#" className={styles.back_to_top}>
