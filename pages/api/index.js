@@ -8,16 +8,29 @@ export default function handler(req, res) {
                 endereco:
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
+<<<<<<< HEAD
                 dose: ['1ª DOSE', '2ª DOSE', '3ª DOSE'],
+=======
+                dose: ['2ª DOSE', '3ª DOSE'],
+                estadofila: '1',
+>>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },
             {
+<<<<<<< HEAD
                 unidade: 'Cetro de Convenções',
+=======
+                unidade: 'Centro de Convenções',
+>>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
                 endereco:
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
                 dose: ['1ª DOSE', '2ª DOSE', '3ª DOSE'],
+<<<<<<< HEAD
+=======
+                estadofila: '2',
+>>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },
@@ -27,6 +40,10 @@ export default function handler(req, res) {
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
                 dose: ['1ª DOSE', '2ª DOSE', '3ª DOSE'],
+<<<<<<< HEAD
+=======
+                estadofila: '4',
+>>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },
@@ -36,17 +53,31 @@ export default function handler(req, res) {
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
                 dose: ['1ª DOSE', '2ª DOSE', '3ª DOSE'],
+<<<<<<< HEAD
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },
         ],
         Postosfixo: [
+=======
+                estadofila: '4',
+                descricao:
+                    'PRIMEIRA DOSE - PESSOAS DE 12 A 17 ANOS COM E SEM COMORBIDADES; GESTANTES E PUÉRPERAS; SEGUNDA DOSE PFIZER PARA PESSOAS COM DATA DE REFORÇO NO CARTÃO DE VACINA ATÉ O DIA 02 DE DEZEMBRO. TERCEIRA DOSE - IDOSOS COM 60 ANOS OU MAIS E PROFISSIONAIS DE SAÚDE QUE RECEBERAM A SEGUNDA DOSE ATÉ O DIA 08 DE JUNHO; PACIENTES IMUNOSSUPRIMIDOS QUE RECEBERAM A SEGUNDA DOSE ATÉ O DIA 05 DE OUTUBRO.',
+            },
+        ],
+        postosfixo: [
+>>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
             {
                 unidade: 'USF Fazenda Grande III',
                 endereco:
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
+<<<<<<< HEAD
                 dose: ['1ª DOSE', '2ª DOSE', '3ª DOSE'],
+=======
+                dose: ['2ª DOSE', '3ª DOSE'],
+                estadofila: '2',
+>>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },
@@ -55,16 +86,28 @@ export default function handler(req, res) {
                 endereco:
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
+<<<<<<< HEAD
                 dose: ['1ª DOSE', '2ª DOSE', '3ª DOSE'],
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
+=======
+                dose: ['2ª DOSE'],
+                estadofila: '3',
+                descricao:
+                    'SEGUNDA DOSE OXFORD PARA PESSOAS COM DATA DE REFORÇO NO CARTÃO DE VACINA ATÉ O DIA 02 DE DEZEMBRO.',
+>>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
             },
             {
                 unidade: 'USF Itapuã',
                 endereco:
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
+<<<<<<< HEAD
                 dose: ['1ª DOSE', '2ª DOSE', '3ª DOSE'],
+=======
+                dose: ['3ª DOSE'],
+                estadofila: '4',
+>>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },
@@ -73,7 +116,22 @@ export default function handler(req, res) {
                 endereco:
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
+<<<<<<< HEAD
                 dose: ['1ª DOSE', '2ª DOSE', '3ª DOSE'],
+=======
+                dose: ['1ª DOSE'],
+                estadofila: '5',
+                descricao:
+                    'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
+            },
+            {
+                unidade: 'USF Prof. Eduardo Mamede',
+                endereco:
+                    'Setor e Caminho 16 Mussurunga, s/n - Mussurunga I, Salvador - BA, 41490-286',
+                atualizacao: '14:40:30',
+                dose: ['1ª DOSE'],
+                estadofila: '2',
+>>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },

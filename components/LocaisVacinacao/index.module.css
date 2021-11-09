@@ -7,8 +7,7 @@
     background-color: #fff;
     padding: 1rem;
     margin: 0 2rem 2rem;
-    font-family: 'Poppins';
-    border-left: solid 10px #5dce78;
+    font-family: 'Poppins';    
     border-radius: 10px;
 }
 
@@ -87,36 +86,75 @@
 
 
 /************** Status fila ************/
+.corSemFila::after,
 .corSemFila {
     color: #5dce78;
+    content: "sem fila";
 }
 
 .bgSemFila {
     background-color: #5dce78;
 }
 
+.brdSemFila {
+    border-left: solid 10px #5dce78;
+}
+
+.corPoucaFila::after,
 .corPoucaFila {
     color: #f1bf1f;
+    content: "pouca fila";
 }
 
 .bgPoucaFila {
     background-color: #f1bf1f;
 }
 
-.corFilaIntensa {
+.brdPoucaFila {
+    border-left: solid 10px #f1bf1f;
+}
+
+.corFilaModerada::after,
+.corFilaModerada {
+    color: #ed902c;
+    content: "fila moderada";
+}
+
+.bgFilaModerada {
+    background-color: #ed902c;
+}
+
+.brdFilaModerada {
+    border-left: solid 10px #ed902c;
+}
+
+.corFilaIntensa::after,
+.corFilaIntensa
+{
     color: #a71319;
+    content: "fila intensa";
 }
 
 .bgFilaIntensa {
     background-color: #a71319;
 }
 
+.brdFilaIntensa {
+    border-left: solid 10px #a71319;
+}
+
+.corEncerrado::after,
 .corEncerrado {
     color: #cccccc;
+    content: "encerrado";    
 }
 
 .bgEncerrado {
     background-color: #cccccc;
+}
+
+.brdEncerrado {
+    border-left: solid 10px #cccccc;
 }
 
 
