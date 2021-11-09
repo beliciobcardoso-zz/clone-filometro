@@ -133,7 +133,7 @@
   margin-right: 0.5rem;
 }
 
-/*************************/
+/********* Botão back to top ****************/
 
 .display_none {
   display: none;
@@ -141,18 +141,19 @@
 
 .back_to_top {
   position: fixed;
-  bottom: 60px;
-  right: 60px;
+  bottom: 25px;
+  right: 25px;
   width: 64px;
   height: 64px;
   z-index: 99;
+  padding: 16px;
   cursor: pointer;
   text-decoration: none;
   transition: opacity 0.2s ease-out;
 }
 
 a.back_to_top {
-  padding: 16px;
+  
   font-size: 2rem;
   color: #ffffff;
   background-color: #3fafb5;
@@ -191,6 +192,14 @@ a.back_to_top:hover {
     font-size: 75%;
     padding: 0 2rem;
   }
+
+  .back_to_top {  
+    bottom: 10px;
+    right: 10px;
+    width: 54px;
+    height: 54px;  
+    padding: 11px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -204,6 +213,12 @@ a.back_to_top:hover {
 
   .buttons button {
     font-size: 75%;
+  }
+
+  .back_to_top {  
+    bottom: 15px;
+    right: 15px
+   
   }
 }
 
