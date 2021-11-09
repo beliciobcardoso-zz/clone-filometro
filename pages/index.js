@@ -146,21 +146,10 @@ export default function Home() {
 
             <footer className={styles.footer}>
                 <p>
-                    Belicio Cardoso &copy;
+                    Belicio Batista Cardoso &copy;
                     {new Date().getFullYear()}
                 </p>
             </footer>
         </div>
     );
-}
-
-export async function getStaticProps() {
-    const res = await fetch(process.env.HOST);
-    const posts = await res.json();
-    //console.log(process.env.HOST);
-    return {
-        props: {
-            posts,
-        },
-    };
 }
