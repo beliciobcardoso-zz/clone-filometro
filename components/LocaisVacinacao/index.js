@@ -24,25 +24,25 @@ export default function LocaisVacinacao({
                     <div className={styles.containerTipo}>
                         <div className={styles.bgSemFila}>
                             <FontAwesomeIcon icon="clock" />
-                            <p>atualizado atualizacao</p>
+                            <p>atualizado {atualizacao}</p>
                         </div>
                         <div className={styles.bgSemFila}>
                             <FontAwesomeIcon icon="check" />
-                            <p>dose1</p>
+                            <p>{dose1}</p>
                         </div>
                         <div className={styles.bgSemFila}>
                             <FontAwesomeIcon icon="check" />
-                            <p>dose2</p>
+                            <p>{dose2}</p>
                         </div>
                         <div className={styles.bgSemFila}>
                             <FontAwesomeIcon icon="check" />
-                            <p>dose3</p>
+                            <p>{dose3}</p>
                         </div>
                     </div>
 
                     <div className={styles.publicoAlvo}>
                         <p>
-                            <FontAwesomeIcon icon="car" /> descricao
+                            <FontAwesomeIcon icon="car" /> {descricao}
                         </p>
                     </div>
                 </div>
