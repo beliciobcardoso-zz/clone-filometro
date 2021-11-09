@@ -5,7 +5,8 @@ import logopms from '../public/imagens/logo-pms.png';
 import logofilo from '../public/imagens/logo-filometro.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import LocVac from '../components/LocaisVacinacao/index';
+import LocVac from '../components/LocaisVacinacao';
+import StatusCard from '../components/StatusCard';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
 
@@ -25,52 +26,29 @@ export default function Home({ data }) {
 
             <main className={styles.main}>
                 <div className={styles.status}>
-                    <div className={styles.statusCard}>
-                        <FontAwesomeIcon
-                            className={styles.icon}
-                            icon="clinic-medical"
-                        />
-                        <div className={styles.cardData}>
-                            <p>POSTOS ATIVOS</p>
-                            <p>15</p>
-                        </div>
-                    </div>
-
-                    <div className={styles.statusCard}>
-                        <FontAwesomeIcon
-                            className={styles.icon}
-                            icon="syringe"
-                        />
-                        <div className={styles.cardData}>
-                            <p>VACINADOS HOJE</p>
-                            <p>(1ª, 2ª E 3ª DOSES)</p>
-                            <p>9.493</p>
-                        </div>
-                    </div>
-
-                    <div className={styles.statusCard}>
-                        <FontAwesomeIcon
-                            className={styles.icon}
-                            icon="chart-line"
-                        />
-                        <div className={styles.cardData}>
-                            <p>MÉDIA GERAL</p>
-                            <p>DRIVE THRU</p>
-                            <p>Poucas filas</p>
-                        </div>
-                    </div>
-
-                    <div className={styles.statusCard}>
-                        <FontAwesomeIcon
-                            className={styles.icon}
-                            icon="chart-line"
-                        />
-                        <div className={styles.cardData}>
-                            <p>MÉDIA GERAL</p>
-                            <p>POSTOS FIXOS</p>
-                            <p>Filas Moderadas</p>
-                        </div>
-                    </div>
+                    <StatusCard
+                        icon={'clinic-medical'}
+                        subtitle1={'POSTOS ATIVOS'}
+                        status={15}
+                    />
+                    <StatusCard
+                        icon={'syringe'}
+                        subtitle1={'VACINADOS HOJE'}
+                        subtitle2={'(1ª, 2ª E 3ª DOSES)'}
+                        status={6.258}
+                    />
+                    <StatusCard
+                        icon={'chart-line'}
+                        subtitle1={'MÉDIA GERAL'}
+                        subtitle2={'DRIVE THRU'}
+                        status={'Encerradas'}
+                    />
+                    <StatusCard
+                        icon={'chart-line'}
+                        subtitle1={'MÉDIA GERAL'}
+                        subtitle2={'POSTOS FIXOS'}
+                        status={'Poucas filas'}
+                    />
                 </div>
 
                 <div className={styles.containerVacinacao}>
@@ -144,8 +122,8 @@ export default function Home({ data }) {
 
             <footer className={styles.footer}>
                 <p>
-                    Belicio Batista Cardoso &copy;
-                    {new Date().getFullYear()}
+                    Belicio Batista Cardoso &copy; {new Date().getFullYear()} -
+                    Todos os direitos
                 </p>
             </footer>
         </div>
