@@ -155,7 +155,7 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps() {
-    const res = await fetch(process.env.HOST);
+    const res = await fetch(process.env.API);
     const data = await res.json();
 
     if (!data) {
