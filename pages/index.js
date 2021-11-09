@@ -5,9 +5,9 @@ import logopms from '../public/imagens/logo-pms.png';
 import logofilo from '../public/imagens/logo-filometro.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import LocVac from '../components/LocaisVacinacao/index';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
-import LocVac from '../components/LocaisVacinacao/index';
 
 export default function Home() {
     return (
@@ -104,6 +104,19 @@ export default function Home() {
                             <p>DRIVE THRU</p>
                         </div>
                         <LocVac />
+                        {/* {posts.drivethru.map((post, index) => (
+                            <LocVac
+                                key={index}
+                                unidade={post.unidade}
+                                endereco={post.endereco}
+                                atualizacao={post.atualizacao}
+                                dose1={post.dose[0]}
+                                dose2={post.dose[1]}
+                                dose3={post.dose[2]} //undefined
+                                //estadofila={post.estadofila}
+                                descricao={post.descricao}
+                            />
+                        ))} */}
                     </section>
                     <section id="postosFixos">
                         <div className={styles.titleLocal}>
@@ -111,8 +124,19 @@ export default function Home() {
                             <p>POSTOS FIXOS</p>
                         </div>
                         <LocVac />
-                        <LocVac />
-                        <LocVac />
+                        {/* posts.postosfixo.map((post, index) => (
+                            <LocVac
+                                key={index}
+                                unidade={post.unidade}
+                                endereco={post.endereco}
+                                atualizacao={post.atualizacao}
+                                dose1={post.dose[0]}
+                                dose2={post.dose[1]}
+                                dose3={post.dose[2]} //undefined
+                                //estadofila={post.estadofila}
+                                descricao={post.descricao}
+                            />
+                        )) */}
                     </section>
                 </div>
                 <a href="#" className={styles.back_to_top}>
@@ -121,8 +145,18 @@ export default function Home() {
             </main>
 
             <footer className={styles.footer}>
-                <p>Belicio Cardoso &copy; {new Date().getFullYear()}</p>
+                <p>
+                    Belicio Batista Cardoso &copy;
+                    {new Date().getFullYear()}
+                </p>
             </footer>
         </div>
     );
+}
+
+export async function getServerSideProps() {
+    const res = await fetch(process.env.HOST);
+    const data = await res.json();
+
+    return { props: { data } };
 }
