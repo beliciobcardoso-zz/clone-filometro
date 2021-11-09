@@ -103,7 +103,6 @@ export default function Home({ data }) {
                             <FontAwesomeIcon icon="car" />
                             <p>DRIVE THRU</p>
                         </div>
-                        <LocVac />
                         {data.drivethru.map((post, index) => (
                             <LocVac
                                 key={index}
@@ -113,7 +112,7 @@ export default function Home({ data }) {
                                 dose1={post.dose[0]}
                                 dose2={post.dose[1]}
                                 dose3={post.dose[2]} //undefined
-                                //estadofila={post.estadofila}
+                                estadofila={post.estadofila}
                                 descricao={post.descricao}
                             />
                         ))}
@@ -123,7 +122,6 @@ export default function Home({ data }) {
                             <FontAwesomeIcon icon="male" />
                             <p>POSTOS FIXOS</p>
                         </div>
-                        <LocVac />
                         {data.postosfixo.map((post, index) => (
                             <LocVac
                                 key={index}

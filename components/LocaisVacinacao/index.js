@@ -18,8 +18,8 @@ export default function LocaisVacinacao({
         <div className={styles.row}>
             <div className={styles.rowEndereco}>
                 <div className={styles.endereco}>
-                    <p>unidade</p>
-                    <p>endereco</p>
+                    <p>{unidade}</p>
+                    <p>{endereco}</p>
 
                     <div className={styles.containerTipo}>
                         <div className={styles.bgSemFila}>
