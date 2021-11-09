@@ -12,63 +12,39 @@ export default function LocaisVacinacao({
     dose2,
     dose3,
     descricao,
-<<<<<<< HEAD
     //estadofila,
 }) {
+    let bgEstadoFila = styles.bgSemFila;
+    let corEstadoFila = styles.corSemFila;
     return (
         <div className={styles.row}>
-=======
-  
->>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
             <div className={styles.rowEndereco}>
                 <div className={styles.endereco}>
                     <p>{unidade}</p>
                     <p>{endereco}</p>
 
                     <div className={styles.containerTipo}>
-<<<<<<< HEAD
                         <div className={styles.bgSemFila}>
                             <FontAwesomeIcon icon="clock" />
                             <p>atualizado {atualizacao}</p>
-=======
-                        <div className={bgEstadoFila}>
-                            <FontAwesomeIcon icon="clock" />
-                            <p>atualizado {atualizacao}</p>
                         </div>
                         <div className={bgEstadoFila}>
                             <FontAwesomeIcon icon="check" />
                             <p>{dose1}</p>
->>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
                         </div>
                         <div className={bgEstadoFila}>
                             <FontAwesomeIcon icon="check" />
-<<<<<<< HEAD
-                            <p>{dose1}</p>
-=======
-                            <p>{dose1}</p>
->>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
-                        </div>
-                        <div className={bgEstadoFila}>
-                            <FontAwesomeIcon icon="check" />
-<<<<<<< HEAD
                             <p>{dose2}</p>
                         </div>
                         <div className={styles.bgSemFila}>
                             <FontAwesomeIcon icon="check" />
-=======
->>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
                             <p>{dose3}</p>
                         </div>
                     </div>
 
                     <div className={styles.publicoAlvo}>
                         <p>
-<<<<<<< HEAD
                             <FontAwesomeIcon icon="car" /> {descricao}
-=======
-                            <FontAwesomeIcon icon="car" />
-                            {descricao}
->>>>>>> 4cbbd4f16711b069052a0f2d6aa61a4e13bad095
                         </p>
                     </div>
                 </div>
