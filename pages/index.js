@@ -9,8 +9,26 @@ import LocVac from '../components/LocaisVacinacao';
 import StatusCard from '../components/StatusCard';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
+import { useState, useEffect } from 'react';
 
 export default function Home({ data }) {
+    const [showBackToTop, setShowBackToTop] = useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 500) {
+            setShowBackToTop(true);
+        } else {
+            setShowBackToTop(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    });
+
     return (
         <div className={styles.container}>
             <Head>
@@ -89,7 +107,7 @@ export default function Home({ data }) {
                                 atualizacao={post.atualizacao}
                                 dose1={post.dose[0]}
                                 dose2={post.dose[1]}
-                                dose3={post.dose[2]} //undefined
+                                dose3={post.dose[2]}
                                 estadofila={post.estadofila}
                                 descricao={post.descricao}
                             />
@@ -108,14 +126,19 @@ export default function Home({ data }) {
                                 atualizacao={post.atualizacao}
                                 dose1={post.dose[0]}
                                 dose2={post.dose[1]}
-                                dose3={post.dose[2]} //undefined
+                                dose3={post.dose[2]}
                                 estadofila={post.estadofila}
                                 descricao={post.descricao}
                             />
                         ))}
                     </section>
                 </div>
-                <a href="#" className={styles.back_to_top}>
+                <a
+                    href="#"
+                    className={
+                        showBackToTop ? styles.back_to_top : styles.display_none
+                    }
+                >
                     <FontAwesomeIcon icon="arrow-alt-circle-up" />
                 </a>
             </main>

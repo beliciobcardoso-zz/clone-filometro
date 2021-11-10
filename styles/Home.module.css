@@ -1,148 +1,149 @@
 .container {
-  background-color: #c3d8c1;
-  background-image: url('../public/imagens/bg-indicadores.png');
-  background-repeat: no-repeat;
-  padding: 0 6rem;
+    background-color: #c3d8c1;
+    background-image: url('../public/imagens/bg-indicadores.png');
+    background-repeat: no-repeat;
+    padding: 0 6rem;
 }
 
 .header {
-  padding: 2rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*****************************/
 
 .status {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /******************************/
 
 .containerVacinacao {
-  background-color: #f6f6fc;
-  padding: 0.2rem 0 2rem;
+    background-color: #f6f6fc;
+    padding: 0.2rem 0 2rem;
 }
 
 .containerVacinacao>div:nth-child(2) {
-  border-bottom: solid 5px #77aba5;
-  border-radius: 0 0 5px 5px;
-  margin: 0.1rem 2rem 0;
+    border-bottom: solid 5px #77aba5;
+    border-radius: 0 0 5px 5px;
+    margin: 0.1rem 2rem 0;
 }
 
 .locaisVacinacao {
-  padding-top: 0.2rem;
-  background-color: #d3d2d2;
-  padding: 0 2rem;
+    padding-top: 0.2rem;
+    background-color: #d3d2d2;
+    padding: 0 2rem;
 }
 
 .locaisVacinacao .title {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .locaisVacinacao .title svg {
-  color: #77aba5;
-  font-size: 1.5rem;
+    color: #77aba5;
+    font-size: 1.5rem;
 }
 
 .locaisVacinacao .title h1 {
-  color: #777777;
-  text-transform: uppercase;
-  font-family: Roboto;
-  font-weight: 900;
-  padding-left: 0.5rem;
+    color: #777777;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-weight: 900;
+    padding-left: 0.5rem;
 }
 
 .containerVacinacao .buttons {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1.5rem 2rem 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem 2rem 0.5rem;
 }
 
 .buttons button {
-  display: flex;
-  align-items: center;
-  margin: 0.3rem;
-  padding: 0.8rem;
-  border-radius: 5px;
-  border: none;
-  background-color: #3fafb5;
-  color: #fff;
-  font-size: 1rem;
-  font-family: 'Poppins';
-  font-weight: 700;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 0.3rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #3fafb5;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins';
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .buttons button svg {
-  margin-right: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .buttons button:hover {
-  background-color: #77aba5;
+    background-color: #77aba5;
 }
 
 .containerVacinacao section .titleLocal {
-  display: flex;
-  align-items: center;
-  background-color: #dcdcea;
-  padding: 1rem;
-  margin: 0 2rem 2rem;
-  color: #777777;
-  font-family: 'Poppins';
-  font-weight: 900;
-  border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #dcdcea;
+    padding: 1rem;
+    margin: 0 2rem 2rem;
+    color: #777777;
+    font-family: 'Poppins';
+    font-weight: 900;
+    border-radius: 5px;
 }
 
 .titleLocal svg {
-  margin-right: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 /********* Botão back to top ****************/
 
 .display_none {
-  display: none;
+    display: none;
 }
 
 .back_to_top {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 64px;
-  height: 64px;
-  z-index: 99;
-  padding: 16px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: opacity 0.2s ease-out;
+    display: block;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 64px;
+    height: 64px;
+    z-index: 99;
+    padding: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
 }
 
 a.back_to_top {
-  
-  font-size: 2rem;
-  color: #ffffff;
-  background-color: #3fafb5;
-  border-radius: 6px;
+
+    font-size: 2rem;
+    color: #ffffff;
+    background-color: #3fafb5;
+    border-radius: 6px;
 }
 
 a.back_to_top:hover {
-  background-color: #77aba5;
-  padding-top: 5px;
+    background-color: #77aba5;
+    padding-top: 5px;
 }
 
 
 /**************************/
 
 .footer {
-  display: flex;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -150,50 +151,49 @@ a.back_to_top:hover {
 
 @media (max-width: 1024px) {
 
-  .status {
-    display: block;
-  }
+    .status {
+        display: block;
+    }
 }
 
 @media (max-width: 768px) {
 
-  .container {
-    font-size: 75%;
-    padding: 0 2rem;
-  }
+    .container {
+        font-size: 75%;
+        padding: 0 2rem;
+    }
 
-  .back_to_top {  
-    bottom: 10px;
-    right: 10px;
-    width: 54px;
-    height: 54px;  
-    padding: 11px;
-  }
+    .back_to_top {
+        bottom: 10px;
+        right: 10px;
+        width: 54px;
+        height: 54px;
+        padding: 11px;
+    }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0 1rem;
-  }
+    .container {
+        padding: 0 1rem;
+    }
 
-  .locaisVacinacao .title {
-    font-size: 62.5%;
-  }
+    .locaisVacinacao .title {
+        font-size: 62.5%;
+    }
 
-  .buttons button {
-    font-size: 75%;
-  }
+    .buttons button {
+        font-size: 75%;
+    }
 
-  .back_to_top {  
-    bottom: 15px;
-    right: 15px
-   
-  }
+    .back_to_top {
+        bottom: 15px;
+        right: 15px
+    }
 }
 
 @media (max-width: 320px) {
 
-  .buttons button {
-    font-size: 62.5%;
-  }
+    .buttons button {
+        font-size: 62.5%;
+    }
 }
