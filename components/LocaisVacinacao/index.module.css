@@ -84,6 +84,10 @@
     align-items: center;
 }
 
+.display_none {
+    display: none;
+  }
+  
 
 /************** Status fila ************/
 .corSemFila::after,

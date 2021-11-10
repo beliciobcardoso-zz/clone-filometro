@@ -14,6 +14,7 @@ export default function LocaisVacinacao({
     descricao,
     estadofila,
 }) {
+    let displayNone = styles.display_none;
     let bgEstadoFila;
     let corEstadoFila;
     let brdEstadoFila;
@@ -56,11 +57,11 @@ export default function LocaisVacinacao({
                             <FontAwesomeIcon icon="check" />
                             <p>{dose1}</p>
                         </div>
-                        <div className={bgEstadoFila}>
+                        <div className={!dose2 ? displayNone : bgEstadoFila}>
                             <FontAwesomeIcon icon="check" />
                             <p>{dose2}</p>
                         </div>
-                        <div className={bgEstadoFila}>
+                        <div className={!dose3 ? displayNone : bgEstadoFila}>
                             <FontAwesomeIcon icon="check" />
                             <p>{dose3}</p>
                         </div>
