@@ -15,7 +15,7 @@ export default function Home({ data }) {
     const [showBackToTop, setShowBackToTop] = useState(false);
 
     const handleScroll = () => {
-        if (window.scrollY > 500) {
+        if (window.scrollY > ((window.innerHeight * 3)/4)) {
             setShowBackToTop(true);
         } else {
             setShowBackToTop(false);
