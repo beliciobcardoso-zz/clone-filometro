@@ -19,23 +19,23 @@ export default function LocaisVacinacao({
     let corEstadoFila;
     let brdEstadoFila;
 
-    if (estadofila === '1') {
+    if (estadofila === 1) {
         bgEstadoFila = styles.bgSemFila;
         corEstadoFila = styles.corSemFila;
         brdEstadoFila = styles.brdSemFila;
-    } else if (estadofila === '2') {
+    } else if (estadofila === 2) {
         bgEstadoFila = styles.bgPoucaFila;
         corEstadoFila = styles.corPoucaFila;
         brdEstadoFila = styles.brdPoucaFila;
-    } else if (estadofila === '3') {
+    } else if (estadofila === 3) {
         bgEstadoFila = styles.bgFilaModerada;
         corEstadoFila = styles.corFilaModerada;
         brdEstadoFila = styles.brdFilaModerada;
-    } else if (estadofila === '4') {
+    } else if (estadofila === 4) {
         bgEstadoFila = styles.bgFilaIntensa;
         corEstadoFila = styles.corFilaIntensa;
         brdEstadoFila = styles.brdFilaIntensa;
-    } else if (estadofila === '5') {
+    } else if (estadofila === 5) {
         bgEstadoFila = styles.bgEncerrado;
         corEstadoFila = styles.corEncerrado;
         brdEstadoFila = styles.brdEncerrado;

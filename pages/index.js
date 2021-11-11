@@ -15,7 +15,7 @@ export default function Home({ data }) {
     const [showBackToTop, setShowBackToTop] = useState(false);
 
     const handleScroll = () => {
-        if (window.scrollY > ((window.innerHeight * 3)/4)) {
+        if (window.scrollY > (window.innerHeight * 3) / 4) {
             setShowBackToTop(true);
         } else {
             setShowBackToTop(false);
@@ -28,6 +28,17 @@ export default function Home({ data }) {
             window.removeEventListener('scroll', handleScroll);
         };
     });
+
+    const arrayDriveThru = data.drivethru.map((post) => post.ativo);
+    const arrayPostosFixo = data.postosfixo.map((post) => post.ativo);
+
+    const driveThru = arrayDriveThru.reduce(
+        (previousValue, currentValue) => previousValue + currentValue,
+    );
+    const postosFixos = arrayPostosFixo.reduce(
+        (previousValue, currentValue) => previousValue + currentValue,
+    );
+    const totalPostosAtivos = driveThru + postosFixos;
 
     return (
         <div className={styles.container}>
@@ -47,13 +58,13 @@ export default function Home({ data }) {
                     <StatusCard
                         icon={'clinic-medical'}
                         subtitle1={'POSTOS ATIVOS'}
-                        status={15}
+                        status={totalPostosAtivos}
                     />
                     <StatusCard
                         icon={'syringe'}
                         subtitle1={'VACINADOS HOJE'}
                         subtitle2={'(1ª, 2ª E 3ª DOSES)'}
-                        status={6.258}
+                        status={data.totalvacinados}
                     />
                     <StatusCard
                         icon={'chart-line'}
