@@ -57,7 +57,7 @@ export default function handler(req, res) {
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
                 dose: ['2ª DOSE', '3ª DOSE'],
-                estadofila: 2,
+                estadofila: 1,
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },
@@ -68,7 +68,7 @@ export default function handler(req, res) {
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
                 dose: ['2ª DOSE'],
-                estadofila: 3,
+                estadofila: 2,
                 descricao:
                     'SEGUNDA DOSE OXFORD PARA PESSOAS COM DATA DE REFORÇO NO CARTÃO DE VACINA ATÉ O DIA 02 DE DEZEMBRO.',
             },
@@ -79,7 +79,7 @@ export default function handler(req, res) {
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
                 dose: ['3ª DOSE'],
-                estadofila: 4,
+                estadofila: 3,
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },
@@ -90,7 +90,7 @@ export default function handler(req, res) {
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
                 atualizacao: '14:37:30',
                 dose: ['1ª DOSE'],
-                estadofila: 5,
+                estadofila: 4,
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },
@@ -101,7 +101,7 @@ export default function handler(req, res) {
                     'Setor e Caminho 16 Mussurunga, s/n - Mussurunga I, Salvador - BA, 41490-286',
                 atualizacao: '14:40:30',
                 dose: ['1ª DOSE'],
-                estadofila: 2,
+                estadofila: 5,
                 descricao:
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },
