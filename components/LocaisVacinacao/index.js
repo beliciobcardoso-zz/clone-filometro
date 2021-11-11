@@ -5,6 +5,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
 
 export default function LocaisVacinacao({
+    ativo,
     unidade,
     endereco,
     atualizacao,
@@ -40,9 +41,13 @@ export default function LocaisVacinacao({
         corEstadoFila = styles.corEncerrado;
         brdEstadoFila = styles.brdEncerrado;
     }
-
+    //false ? styles.row : styles.display_none
     return (
-        <div className={`${styles.row} ${brdEstadoFila}`}>
+        <div
+            className={`${
+                ativo ? styles.row : styles.display_none
+            } ${brdEstadoFila}`}
+        >
             <div className={styles.rowEndereco}>
                 <div className={styles.endereco}>
                     <p>{unidade}</p>

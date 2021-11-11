@@ -70,7 +70,7 @@ export default function Home({ data }) {
                         icon={'chart-line'}
                         subtitle1={'MÉDIA GERAL'}
                         subtitle2={'DRIVE THRU'}
-                        status={'Encerradas'}
+                        status={'Fila intensa'}
                     />
                     <StatusCard
                         icon={'chart-line'}
@@ -113,6 +113,7 @@ export default function Home({ data }) {
                         {data.drivethru.map((post, index) => (
                             <LocVac
                                 key={index}
+                                ativo={post.ativo}
                                 unidade={post.unidade}
                                 endereco={post.endereco}
                                 atualizacao={post.atualizacao}
@@ -132,6 +133,7 @@ export default function Home({ data }) {
                         {data.postosfixo.map((post, index) => (
                             <LocVac
                                 key={index}
+                                ativo={post.ativo}
                                 unidade={post.unidade}
                                 endereco={post.endereco}
                                 atualizacao={post.atualizacao}

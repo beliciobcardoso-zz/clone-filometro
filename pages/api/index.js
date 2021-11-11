@@ -16,7 +16,7 @@ export default function handler(req, res) {
                     'PRIMEIRA DOSE - PESSOAS COM 18 ANOS OU MAIS; SEGUNDA DOSE CORONAVAC PARA PESSOAS COM DATA DE REFORÇO NO CATÃO DE VACINA ATÉ O DIA 07 DE NOVEMBRO',
             },
             {
-                ativo: 0,
+                ativo: 1,
                 unidade: 'Centro de Convenções',
                 endereco:
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
@@ -51,7 +51,7 @@ export default function handler(req, res) {
         ],
         postosfixo: [
             {
-                ativo: 0,
+                ativo: 1,
                 unidade: 'USF Fazenda Grande III',
                 endereco:
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
@@ -73,7 +73,7 @@ export default function handler(req, res) {
                     'SEGUNDA DOSE OXFORD PARA PESSOAS COM DATA DE REFORÇO NO CARTÃO DE VACINA ATÉ O DIA 02 DE DEZEMBRO.',
             },
             {
-                ativo: 0,
+                ativo: 1,
                 unidade: 'USF Itapuã',
                 endereco:
                     'Rua Dermeval de Souza Gusmão, Local 01-Quadra A- Faz. Grande III, sn, Salvador - BA, 41340-275',
