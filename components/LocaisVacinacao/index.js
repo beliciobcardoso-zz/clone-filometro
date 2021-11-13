@@ -7,6 +7,7 @@ library.add(fas);
 export default function LocaisVacinacao({
     ativo,
     unidade,
+    localizacao,
     endereco,
     atualizacao,
     dose1,
@@ -15,6 +16,7 @@ export default function LocaisVacinacao({
     descricao,
     estadofila,
 }) {
+    let url = 'https://www.google.com.br/maps/place/';
     let displayNone = styles.display_none;
     let bgEstadoFila;
     let corEstadoFila;
@@ -41,7 +43,7 @@ export default function LocaisVacinacao({
         corEstadoFila = styles.corEncerrado;
         brdEstadoFila = styles.brdEncerrado;
     }
-    //false ? styles.row : styles.display_none
+
     return (
         <div
             className={`${
@@ -51,7 +53,11 @@ export default function LocaisVacinacao({
             <div className={styles.rowEndereco}>
                 <div className={styles.endereco}>
                     <p>{unidade}</p>
-                    <p>{endereco}</p>
+
+                    <a href={url + localizacao} target="_blank">
+                        <FontAwesomeIcon icon="map-marked-alt" />
+                        {endereco}
+                    </a>
 
                     <div className={styles.containerTipo}>
                         <div className={bgEstadoFila}>

@@ -7,7 +7,7 @@
     background-color: #fff;
     padding: 1rem;
     margin: 0 2rem 2rem;
-    font-family: 'Poppins';    
+    font-family: 'Poppins';
     border-radius: 10px;
 }
 
@@ -23,7 +23,20 @@
     color: #000
 }
 
-.endereco>p:nth-child(2),
+.endereco a {
+    color: #777777;
+}
+
+.endereco a:hover {
+    color: #77aba5;
+    font-weight: bold;
+}
+
+.endereco a svg {
+    color: #77aba5;
+    margin: 0 0.5rem;
+}
+
 .tituloSituacaoFila {
     color: #777777;
 }
@@ -42,6 +55,7 @@
 .containerTipo {
     display: flex;
     align-items: center;
+    margin-top: 0.5rem;
 }
 
 .containerTipo div,
@@ -86,8 +100,8 @@
 
 .display_none {
     display: none;
-  }
-  
+}
+
 
 /************** Status fila ************/
 .corSemFila::after,
@@ -133,8 +147,7 @@
 }
 
 .corFilaIntensa::after,
-.corFilaIntensa
-{
+.corFilaIntensa {
     color: #a71319;
     content: "fila intensa";
 }
@@ -150,7 +163,7 @@
 .corEncerrado::after,
 .corEncerrado {
     color: #cccccc;
-    content: "encerrado";    
+    content: "encerrado";
 }
 
 .bgEncerrado {

@@ -115,6 +115,7 @@ export default function Home({ data }) {
                                 key={index}
                                 ativo={post.ativo}
                                 unidade={post.unidade}
+                                localizacao={post.localizacao}
                                 endereco={post.endereco}
                                 atualizacao={post.atualizacao}
                                 dose1={post.dose[0]}
@@ -135,6 +136,7 @@ export default function Home({ data }) {
                                 key={index}
                                 ativo={post.ativo}
                                 unidade={post.unidade}
+                                localizacao={post.localizacao}
                                 endereco={post.endereco}
                                 atualizacao={post.atualizacao}
                                 dose1={post.dose[0]}
